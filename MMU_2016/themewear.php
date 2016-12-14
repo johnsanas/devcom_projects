@@ -24,6 +24,10 @@
 					Choose from the dropdown menu to select for a particular candidate.</p>
 				</div>
 
+				<div class="backbutton">
+					<a class="button btn-default" href='javascript:history.go(-1)'>BACK</a>
+				</div>
+
 				
 				<div class="row-grid">	
 				  <div class="col-sm-12 col-md-6">
