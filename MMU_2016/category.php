@@ -22,7 +22,7 @@
 			<div class="contentMain">
 				<div class="row-grid">
 					<div class="col-sm-3 col-md-4">
-						<a href="#" class="thumbnail yellow">
+						<a href="themewear.php" class="thumbnail yellow">
 							<img src="img/pageantLogo.png">
 							<p class="darkYellow">Theme Wear</p>
 						</a>
@@ -32,7 +32,7 @@
 
 				<div class="row-grid">
 					<div class="col-sm-3 col-md-4">
-						<a href="#" class="thumbnail pink">
+						<a href="schoolwear.php" class="thumbnail pink">
 							<img src="img/pageantLogo.png">
 							<p class="darkPink">School Wear</p>
 						</a>
@@ -41,7 +41,7 @@
 
 				<div class="row-grid">
 					<div class="col-sm-3 col-md-4">
-						<a href="#" class="thumbnail blue">
+						<a href="formalwear.php" class="thumbnail blue">
 							<img src="img/pageantLogo.png">
 							<p class="darkBlue">Formal Wear</p>
 						</a>
@@ -49,7 +49,7 @@
 				</div>
 				<div class="row-grid">
 					<div class="col-sm-3 col-md-4">
-						<a href="#" class="thumbnail green">
+						<a href="swimwear.php" class="thumbnail green">
 							<img src="img/pageantLogo.png">
 							<p class="darkGreen">Swim Wear</p>
 						</a>
