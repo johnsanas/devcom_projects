@@ -16,10 +16,10 @@ function Populate_Dropdown30(){
 
 	while($num>=1){
 	?>
-			<option value="<?php echo $num;?>"><?php echo $num; ?></option>
+		<option value="<?php echo $num;?>"><?php echo $num; ?></option>
 	<?php
-			$num--;
-		}
+		$num--;
+	}
 }
 
 function Populate_Dropdown20(){
@@ -27,10 +27,30 @@ function Populate_Dropdown20(){
 
 	while($num>=1){
 	?>
-			<option value="<?php echo $num;?>"><?php echo $num; ?></option>
+		<option value="<?php echo $num;?>"><?php echo $num; ?></option>
 	<?php
-			$num--;
-		}
+		$num--;
+	}
+}
+
+function Populate_Dropdown9(){
+	$num = 1;
+
+	while($num<=9){
+	?>
+		<option value="<?php echo $num; ?>"><?php echo $num; ?></option>
+	<?php
+	}
+}
+
+function Populate_Dropdown8(){
+	$num = 1;
+
+	while($num<=8){
+	?>
+		<option value="<?php echo $num; ?>"><?php echo $num; ?></option>
+	<?php
+	}
 }
 ?>
 
