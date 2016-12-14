@@ -29,8 +29,5 @@
 </body>
 </html>
 
-<<<<<<< HEAD
-<!--COMMIT NI ALDWIN KOs-->
-=======
 <!--COMMIT NI ALDWIN KO joke ni Rosel yieee-->
->>>>>>> 2de7e48cb3c8945d66179a7eb034150c1318ddcb
+		
