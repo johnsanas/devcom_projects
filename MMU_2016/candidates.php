@@ -63,14 +63,7 @@
 					   				<select name="poiseBear">
 					   					<option selected disabled hidden>Choose a score..</option>
 									    <?php
-									    	$num = 1;
-
-									    	while($num<=30){
-									    ?>
-									    		<option value="<?php echo $num;?>"><?php echo $num; ?></option>
-									    <?php
-									    		$num++;
-									    	}
+									    	Populate_Dropdown30();
 									    ?>
 					   				</select>
 
@@ -78,14 +71,7 @@
 					   				<select name="carriage">
 					   					<option selected disabled hidden>Choose a score..</option>
 									    <?php
-									    	$num = 1;
-
-									    	while($num<=30){
-									    ?>
-									    		<option value="<?php echo $num;?>"><?php echo $num; ?></option>
-									    <?php
-									    		$num++;
-									    	}
+									    	Populate_Dropdown30();
 									    ?>
 					   				</select>
 
@@ -93,14 +79,7 @@
 					   				<select name="beauty">
 					   					<option selected disabled hidden>Choose a score..</option>
 									    <?php
-									    	$num = 1;
-
-									    	while($num<=30){
-									    ?>
-									    		<option value="<?php echo $num;?>"><?php echo $num; ?></option>
-									    <?php
-									    		$num++;
-									    	}
+									    	Populate_Dropdown20();
 									    ?>
 					   				</select>
 
@@ -108,14 +87,7 @@
 					   				<select name="eleSop">
 					   					<option selected disabled hidden>Choose a score..</option>
 									    <?php
-									    	$num = 1;
-
-									    	while($num<=30){
-									    ?>
-									    		<option value="<?php echo $num;?>"><?php echo $num; ?></option>
-									    <?php
-									    		$num++;
-									    	}
+									    	Populate_Dropdown20();
 									    ?>
 					   				</select>
 
@@ -165,14 +137,7 @@
 					   				<select name="poiseBear">
 					   					<option selected disabled hidden>Choose a score..</option>
 									    <?php
-									    	$num = 1;
-
-									    	while($num<=30){
-									    ?>
-									    		<option value="<?php echo $num;?>"><?php echo $num; ?></option>
-									    <?php
-									    		$num++;
-									    	}
+									    	Populate_Dropdown30();
 									    ?>
 					   				</select>
 
@@ -180,14 +145,7 @@
 					   				<select name="carriage">
 					   					<option selected disabled hidden>Choose a score..</option>
 									    <?php
-									    	$num = 1;
-
-									    	while($num<=30){
-									    ?>
-									    		<option value="<?php echo $num;?>"><?php echo $num; ?></option>
-									    <?php
-									    		$num++;
-									    	}
+									    	Populate_Dropdown30();
 									    ?>
 					   				</select>
 
@@ -195,14 +153,7 @@
 					   				<select name="beauty">
 					   					<option selected disabled hidden>Choose a score..</option>
 									    <?php
-									    	$num = 1;
-
-									    	while($num<=30){
-									    ?>
-									    		<option value="<?php echo $num;?>"><?php echo $num; ?></option>
-									    <?php
-									    		$num++;
-									    	}
+									    	Populate_Dropdown20();
 									    ?>
 					   				</select>
 
@@ -210,14 +161,7 @@
 					   				<select name="eleSop">
 					   					<option selected disabled hidden>Choose a score..</option>
 									    <?php
-									    	$num = 1;
-
-									    	while($num<=30){
-									    ?>
-									    		<option value="<?php echo $num;?>"><?php echo $num; ?></option>
-									    <?php
-									    		$num++;
-									    	}
+									    	Populate_Dropdown20();
 									    ?>
 					   				</select>
 
