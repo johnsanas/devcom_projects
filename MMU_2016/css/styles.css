@@ -307,7 +307,8 @@ body {
 
 .candidateSelection {
 	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-bottom: 50px;
+	width: 100%;
 }
 
 .candidateSelection label {
@@ -315,6 +316,7 @@ body {
 	font-size: 20px;
 	color: rgb(127,127,127);
 	font-weight: lighter;
+	width: 220px;
 }
 
 .candidateSelection select {
@@ -324,26 +326,24 @@ body {
 
 .candidateSelection #candF {
 	float: left;
-	padding-left: 10px;
 	margin-top: 20px;
 }
 .candidateSelection #candf {
 	float: left;
-	margin-left: 20px;
 	margin-top: 20px;
+	width: 190px;
 	font-family: Century Gothic;
 }
 
 .candidateSelection #candM {
 	margin-top: 20px;
-	margin-left: px;
+	float: left;
 }
 
 .candidateSelection #candm {
-	width: 23%;
-	float: right;
+	float: left;
 	margin-top: 20px;
-	margin-right: 20px;
+	width: 190px;
 	font-family: Century Gothic;
 }
 
@@ -358,9 +358,9 @@ body {
 .candidateSelection .Mbutton{
 	border-radius: 5px;
 	padding: 5px;
-	float: right;
+	float: left;
 	margin-top: 20px;
-	margin-left: -10px;
+	margin-left: 10px;
 }
 
 

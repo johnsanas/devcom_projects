@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>MMU | CANDIDATES</title>
+	<title>MMU | FINALIST</title>
 	<?php include("header.php"); ?>
 </head>
 
@@ -13,7 +13,7 @@
 			<div class="headTitle">
 				<h6>Mr. Aldwin Labrador</h6>
 				<h5>Judge</h5>
-				<h1>THEME WEAR</h1>
+				<h1>FINALIST</h1>
 				<h4>MR & MS UMAK</h4>
 				<h3>2016</h3>
 			</div>
