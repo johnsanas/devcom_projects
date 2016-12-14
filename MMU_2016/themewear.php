@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>MMU | FINALIST</title>
+	<title>MMU | CANDIDATES</title>
 	<?php include("header.php"); ?>
 </head>
 
@@ -13,7 +13,7 @@
 			<div class="headTitle">
 				<h6>Mr. Aldwin Labrador</h6>
 				<h5>Judge</h5>
-				<h1>FINALIST</h1>
+				<h1>THEME WEAR</h1>
 				<h4>MR & MS UMAK</h4>
 				<h3>2016</h3>
 			</div>
@@ -23,10 +23,11 @@
 					<p>Theme wear category has a 20% part on the overall judging process. Each criteria has a   corresponding maximum score given.
 					Choose from the dropdown menu to select for a particular candidate.</p>
 				</div>
-				
+
 				<div class="backbutton">
 					<a class="button btn-default" href='javascript:history.go(-1)'>BACK</a>
 				</div>
+
 				
 				<div class="row-grid">	
 				  <div class="col-sm-12 col-md-6">

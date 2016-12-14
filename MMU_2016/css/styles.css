@@ -68,6 +68,30 @@ body {
 	background-repeat: no-repeat;
 }
 
+.schoolWearBC {
+	background-image: url(../img/schoolwearBC.png);
+	background-size: 100% 100%;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+.formalwearBC {
+	background-image: url(../img/formalwearBC.png);
+	background-size: 100% 100%;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+.swimwearBC {
+	background-image: url(../img/swimwearBC.png);
+	background-size: 100% 100%;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+
+
+
 .headTitle {
 	width: 80%;
 	height: 100px;
@@ -368,4 +392,21 @@ body {
 	margin-left: 10px;
 }
 
+.backbutton {
+	width: 100%;
+	float: left;
+	height: 30px;
+}
 
+
+.backbutton a {
+	padding: 5px;
+	width: 100px;
+	border-radius: 5px;
+	float: left;
+	margin-top: 10px;
+}
+
+.backbutton a:hover {
+	text-decoration: none;
+}
