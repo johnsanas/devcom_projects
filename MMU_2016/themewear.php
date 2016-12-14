@@ -35,9 +35,18 @@
 				  	<div class="candidateSelection">
 					<label id="candF">Female Candidate #</label>
 						<select name="candnumberF" id="candf">
-		   					<option selected disabled hidden>Choose candidate no.</option>
-		   					<?php Populate_Dropdown9(); ?>
-					   	</select>
+					   					<option selected disabled hidden>Choose candidate no.</option>
+									    <?php
+									    	$num = 1;
+
+									    	while($num<=9){
+									    ?>
+									    		<option value="<?php echo $num;?>"><?php echo $num; ?></option>
+									    <?php
+									    		$num++;
+									    	}
+									    ?>
+					   				</select>
 					<button class="button btn-default Fbutton" name="FnoSel">SELECT</button>
 
 				</div>
@@ -91,9 +100,19 @@
 				   
 				<div class="candidateSelection">
 					<label  id="candM">Male Candidate #</label>
-					<select name="candnumberM" id="candm">
-					   	<?php Populate_Dropdown8(); ?>
-					</select>
+					<select name="candnumberM" id="candf">
+					   					<option selected disabled hidden>Choose candidate no.</option>
+									    <?php
+									    	$num = 1;
+
+									    	while($num<=9){
+									    ?>
+									    		<option value="<?php echo $num;?>"><?php echo $num; ?></option>
+									    <?php
+									    		$num++;
+									    	}
+									    ?>
+					   				</select>
 					<button class="button btn-default Mbutton" name="MnoSel">SELECT</button>
 					
 
