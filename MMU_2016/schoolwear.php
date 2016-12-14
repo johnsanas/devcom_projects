@@ -20,7 +20,7 @@
 
 			<div class="contentMain">
 				<div class="instructions">
-					<p>Theme wear category has a 20% part on the overall judging process. Each criteria has a   corresponding maximum score given.
+					<p>School wear category has a 20% part on the overall judging process. Each criteria has a   corresponding maximum score given.
 					Choose from the dropdown menu to select for a particular candidate.</p>
 				</div>
 
@@ -67,14 +67,7 @@
 					   				<select name="poiseBear">
 					   					<option selected disabled hidden>Choose a score..</option>
 									    <?php
-									    	$num = 1;
-
-									    	while($num<=30){
-									    ?>
-									    		<option value="<?php echo $num;?>"><?php echo $num; ?></option>
-									    <?php
-									    		$num++;
-									    	}
+									    	Populate_Dropdown30();
 									    ?>
 					   				</select>
 
@@ -82,14 +75,7 @@
 					   				<select name="carriage">
 					   					<option selected disabled hidden>Choose a score..</option>
 									    <?php
-									    	$num = 1;
-
-									    	while($num<=30){
-									    ?>
-									    		<option value="<?php echo $num;?>"><?php echo $num; ?></option>
-									    <?php
-									    		$num++;
-									    	}
+									    	Populate_Dropdown30();
 									    ?>
 					   				</select>
 
@@ -97,14 +83,7 @@
 					   				<select name="beauty">
 					   					<option selected disabled hidden>Choose a score..</option>
 									    <?php
-									    	$num = 1;
-
-									    	while($num<=30){
-									    ?>
-									    		<option value="<?php echo $num;?>"><?php echo $num; ?></option>
-									    <?php
-									    		$num++;
-									    	}
+									    	Populate_Dropdown20();
 									    ?>
 					   				</select>
 
@@ -112,14 +91,7 @@
 					   				<select name="eleSop">
 					   					<option selected disabled hidden>Choose a score..</option>
 									    <?php
-									    	$num = 1;
-
-									    	while($num<=30){
-									    ?>
-									    		<option value="<?php echo $num;?>"><?php echo $num; ?></option>
-									    <?php
-									    		$num++;
-									    	}
+									    	Populate_Dropdown20();
 									    ?>
 					   				</select>
 
@@ -139,14 +111,7 @@
 					<select name="candnumberM" id="candm">
 					   					<option selected disabled hidden>Choose candidate no.</option>
 									    <?php
-									    	$num = 1;
-
-									    	while($num<=8){
-									    ?>
-									    		<option value="<?php echo $num;?>"><?php echo $num; ?></option>
-									    <?php
-									    		$num++;
-									    	}
+									    	Populate_Dropdown30();
 									    ?>
 					</select>
 					<button class="button btn-default Mbutton" name="MnoSel">SELECT</button>
@@ -169,14 +134,7 @@
 					   				<select name="poiseBear">
 					   					<option selected disabled hidden>Choose a score..</option>
 									    <?php
-									    	$num = 1;
-
-									    	while($num<=30){
-									    ?>
-									    		<option value="<?php echo $num;?>"><?php echo $num; ?></option>
-									    <?php
-									    		$num++;
-									    	}
+									    	Populate_Dropdown30();
 									    ?>
 					   				</select>
 
@@ -184,14 +142,7 @@
 					   				<select name="carriage">
 					   					<option selected disabled hidden>Choose a score..</option>
 									    <?php
-									    	$num = 1;
-
-									    	while($num<=30){
-									    ?>
-									    		<option value="<?php echo $num;?>"><?php echo $num; ?></option>
-									    <?php
-									    		$num++;
-									    	}
+									    	Populate_Dropdown30();
 									    ?>
 					   				</select>
 
@@ -199,14 +150,7 @@
 					   				<select name="beauty">
 					   					<option selected disabled hidden>Choose a score..</option>
 									    <?php
-									    	$num = 1;
-
-									    	while($num<=30){
-									    ?>
-									    		<option value="<?php echo $num;?>"><?php echo $num; ?></option>
-									    <?php
-									    		$num++;
-									    	}
+									    	Populate_Dropdown20();
 									    ?>
 					   				</select>
 
@@ -214,14 +158,7 @@
 					   				<select name="eleSop">
 					   					<option selected disabled hidden>Choose a score..</option>
 									    <?php
-									    	$num = 1;
-
-									    	while($num<=30){
-									    ?>
-									    		<option value="<?php echo $num;?>"><?php echo $num; ?></option>
-									    <?php
-									    		$num++;
-									    	}
+									    	Populate_Dropdown20();
 									    ?>
 					   				</select>
 
