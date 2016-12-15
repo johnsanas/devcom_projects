@@ -47,7 +47,6 @@
 					}
 
 
-
 					$sql = "SELECT * FROM candidates WHERE gender='Male' ORDER BY candidate_number";
 					$query = mysqli_query($conn, $sql);
 
