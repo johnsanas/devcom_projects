@@ -105,11 +105,7 @@ INSERT INTO `candidates` (`id`, `candidate_number`, `first_name`, `middle_name`,
 
 -- --------------------------------------------------------
 
-LOCK TABLES `candidates` WRITE;
-/*!40000 ALTER TABLE `candidates` DISABLE KEYS */;
-INSERT INTO `candidates` VALUES (1,1,'Roni','','Cruz','Bachelor o','K11','Female'),(2,2,'Daniele','','Bigcas','Bachelor o','K11','Female'),(3,3,'Christine','','Lerma','Bachelor o','K11','Female'),(4,4,'Christine','','Moncada','Bachelor o','K11','Female'),(5,5,'Mayline','','Penoliar','Bachelor o','K11','Female'),(6,6,'Ana Cris','','De Jesus','Bachelor o','K11','Female'),(7,7,'Janine','','Anago','Bachelor o','K11','Female'),(8,8,'Christine','','Digas','Bachelor o','K11','Female'),(9,9,'Deborah','','Macapagal','Bachelor o','K11','Female'),(10,1,'John Paul','','Obiar','Bachelor o','K11','Male'),(11,2,'Jay-Ar','','Patalinghug','Bachelor o','K11','Male'),(12,3,'Kim Irvin','','Pardo','Bachelor o','K11','Male'),(13,4,'Gerald','','Capil','Bachelor o','K11','Male'),(14,5,'Ronald','','Mendoz','Bachelor o','K11','Male'),(15,6,'Carlo','','Salaya','Bachelor o','K11','Male'),(16,7,'Richard','','De Leon','Bachelor o','K11','Male'),(17,8,'Christian Van','','Supe','Bachelor o','K11','Male');
-/*!40000 ALTER TABLE `candidates` ENABLE KEYS */;
-UNLOCK TABLES;
+
 
 
 --
@@ -174,14 +170,12 @@ UNLOCK TABLES;
 --
 -- Indexes for table `judges`
 --
-ALTER TABLE `judges`
-  ADD PRIMARY KEY (`id`);
+
 
 --
 -- Indexes for table `votes`
 --
-ALTER TABLE `votes`
-  ADD PRIMARY KEY (`id`);
+
 
 --
 -- AUTO_INCREMENT for dumped tables
