@@ -32,7 +32,7 @@
 				</div>
 
 				<div class="backbutton">
-					<a class="button btn-default" href='javascript:history.go(-1)'>BACK</a>
+					<a class="button btn-default" href='category.php'>BACK</a>
 				</div>
 
 				
