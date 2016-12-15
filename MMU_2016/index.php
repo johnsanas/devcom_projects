@@ -25,7 +25,7 @@ require("connection.php");
 				<div class="form-group enterPasscode">
 					<input type="PASSWORD" class="form-control align-center" id="passcode" name="passcode" placeholder="Passcode" >
 					<br>
-					<input type="submit" value="Log in" name="btnSubmit" class="btn btn-success">
+					<!--<input type="submit" value="Log in" name="btnSubmit" class="btn btn-success">-->
 				</div>
 			</form>
 			<p>Develop by LabradrorVerdeVillaverVillete</p>
