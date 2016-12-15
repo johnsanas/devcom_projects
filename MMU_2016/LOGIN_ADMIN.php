@@ -1,7 +1,7 @@
 <?php 
 
 //Connects to your Database 
-$conect = mysqli_connect("localhost","root","localhost@@", "mmu2016") or die(mysql_error()); 
+$conect = mysqli_connect("localhost","root","", "mmu2016") or die(mysql_error()); 
 
 //Checks if there is a login cookie
 /*

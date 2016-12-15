@@ -1,6 +1,6 @@
 <?php 
 //Connects to your Database 
-mysql_connect("localhost", "root", "localhost@@") or die(mysql_error()); 
+mysql_connect("localhost", "root", "") or die(mysql_error()); 
 mysql_select_db("mmu2016") or die(mysql_error()); 
 
 //This code runs if the form has been submitted
