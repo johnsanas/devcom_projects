@@ -135,9 +135,9 @@ include("session.php");
 					   <div class="row-grid">
 					 	 <div class="col-md-6 col-md-6 blacky">
 					   			<h3>Criteria</h3> 
-
+					   		<form action="" method="post">
 					   			<p>Poise and Bearing</p>
-					   				<select name="poiseBear">
+					   				<select name="m_poiseBear">
 					   					<option selected disabled hidden>Choose a score..</option>
 									    <?php
 									    	Populate_Dropdown30();
@@ -145,7 +145,7 @@ include("session.php");
 					   				</select>
 
 					   			<p>Carriage</p>
-					   				<select name="carriage">
+					   				<select name="m_carriage">
 					   					<option selected disabled hidden>Choose a score..</option>
 									    <?php
 									    	Populate_Dropdown30();
@@ -153,7 +153,7 @@ include("session.php");
 					   				</select>
 
 					   			<p>Beauty</p>
-					   				<select name="beauty">
+					   				<select name="m_beauty">
 					   					<option selected disabled hidden>Choose a score..</option>
 									    <?php
 									    	Populate_Dropdown20();
@@ -161,7 +161,7 @@ include("session.php");
 					   				</select>
 
 					   			<p>Elegance and Sophistication</p>
-					   				<select name="eleSop">
+					   				<select name="m_eleSop">
 					   					<option selected disabled hidden>Choose a score..</option>
 									    <?php
 									    	Populate_Dropdown20();
@@ -169,6 +169,8 @@ include("session.php");
 					   				</select>
 
 					   				<input type="submit" value="Save"> 
+
+					   		</form>
 					  	</div>
 					  </div>
 
@@ -180,3 +182,30 @@ include("session.php");
 
 </body>
 </html>
+
+<?php 
+
+if (isset($_POST['m_submit'])) { 
+
+		$judge_id = $_POST['judge_id'];
+		$candidate_id = $_POST['candidate_id'];
+		$category = $_POST['category'];
+		$sub_category = $_POST['sub_category'];
+		$score = $_POST['score'];
+		
+
+		
+
+		$sql = "INSERT INTO votes (date_time, judge_id, candidate_id, category, sub_category, score) VALUES('$id_number', '$first_name', '$last_name', '$password')";
+		$query = mysqli_query($conn, $sql);
+
+		if($query){
+			echo "<script>alert('Admin Successfully Added')</script>";
+		}else{
+			echo "<script>alert('Failed to add administrator')</script>";
+		}
+}
+
+?>
+
+insert into (date_time, judge_id, candidate_id, category, sub_category_ score) values (now(), $jud)
