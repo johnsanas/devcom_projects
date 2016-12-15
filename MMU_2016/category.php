@@ -83,8 +83,15 @@ include("session.php");
 		sr.reveal('.SwimWear', { delay: 600});
 		sr.reveal('.QnA', { delay: 800});
 
+	   $('#logout').click(function() {
+	        return false;
+	    }).dblclick(function() {
+	        window.location = this.href;
+	        return false;
+	    });
 
 
+	    $('[data-toggle="tooltip"]').tooltip();   
 	}); 
 
 	</script>
