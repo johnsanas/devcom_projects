@@ -1,5 +1,12 @@
-<?php
+
+<?php 
 include("session.php");
+include("connection.php");
+
+	$nameq = "select * from judges where id='".$_SESSION['judge_id']."'";
+	$namer = mysqli_query($conn,$nameq);
+	$row = mysqli_fetch_assoc($namer);
+	$fullname = $row['first_name']." ".$row['last_name'];
 ?>
 
 <!DOCTYPE HTML>
@@ -14,7 +21,12 @@ include("session.php");
 
 		<div class="categoryHome">
 
+
+			<div class="headTitle">
+	
+
 			<!--<div class="headTitle">
+				h6><?php echo($fullname); ?></h6>
 				<h6>Mr. Aldwin Labrador</h6>
 				<h5>Judge</h5>
 				<h1>THEME WEAR</h1>
@@ -26,7 +38,7 @@ include("session.php");
 
 			<div class="contentMain">
 				<div class="instructions">
-					<p>Theme wear category has a 20% part on the overall judging process. Each criteria has a   corresponding maximum score given.
+					<p>Theme wear category has a 20% part on the overall judging process. Each criteria has a corresponding maximum score given.
 					Choose from the dropdown menu to select for a particular candidate.</p>
 				</div>
 
@@ -36,6 +48,7 @@ include("session.php");
 
 				
 				<div class="row-grid">	
+<<<<<<< HEAD
 				  <div class="col-sm-12 col-md-6">
 
 				  	<div class="candidateSelection">
@@ -76,42 +89,66 @@ include("session.php");
 					 	 	?>
 					 	 	<img src="<?php echo $candidateimg;?>" id="leftimage">
 					 	 	<p style="width:100%">Candidate # <?php echo "$candidateno";?></p>
+=======
+					<div class="col-sm-12 col-md-6">
+
+						<div class="candidateSelection">
+							<label id="candF">Female Candidate #</label>
+								<select name="candnumberF" id="candf">
+									<option selected disabled hidden>Choose candidate no.</option>
+									<?php Populate_Dropdown9(); ?>
+								</select>
+							<button class="button btn-default Fbutton" name="FnoSel">SELECT</button>
 						</div>
-					  </div>
+						<?php
+							$candidateq = "select * from candidates where gender='Female'";
+							$candidater = mysqli_query($conn,$candidateq);
+							while($row = mysqli_fetch_assoc($candidater)){ ?>
+
+						
+						<!--CANDIDATE ITEM-->
+				   	<div class="row-grid">
+					 		<div class="col-md-6 col-md-6 whitey">
+								<img src="img/FemaleCandidate<?php echo($row['candidate_number']); ?>.jpg" id="leftimage">
+					 	 		<p style="width:100%">Candidate # <?php echo($row['candidate_number']); ?></p>
+							</div>
+>>>>>>> c68286a0b977e14d4d4103a61a78760d8fd18334
+						</div>
 
 					   <div class="row-grid">
-					 	 <div class="col-md-6 col-md-6 blacky">
-				   			<h3>Criteria</h3> 
+					 		<div class="col-md-6 col-md-6 blacky">
+								<h3>Criteria</h3> 
 
-				   			<p>Poise and Bearing</p>
-				   				<select name="poiseBear">
-				   					<option selected disabled hidden>Choose a score..</option>
-								    <?php Populate_Dropdown30(); ?>
-				   				</select>
+								<p>Poise and Bearing</p>
+									<select name="poiseBear">
+										<option selected disabled hidden>Choose a score..</option>
+										<?php Populate_Dropdown30(); ?>
+									</select>
 
-				   			<p>Carriage</p>
-				   				<select name="carriage">
-				   					<option selected disabled hidden>Choose a score..</option>
-								    <?php Populate_Dropdown30(); ?>
-				   				</select>
+								<p>Carriage</p>
+									<select name="carriage">
+										<option selected disabled hidden>Choose a score..</option>
+										<?php Populate_Dropdown30(); ?>
+									</select>
 
-				   			<p>Beauty</p>
-				   				<select name="beauty">
-				   					<option selected disabled hidden>Choose a score..</option>
-								    <?php Populate_Dropdown20(); ?>
-				   				</select>
+								<p>Beauty</p>
+									<select name="beauty">
+										<option selected disabled hidden>Choose a score..</option>
+										<?php Populate_Dropdown20(); ?>
+									</select>
 
-				   			<p>Elegance and Sophistication</p>
-				   				<select name="eleSop">
-				   					<option selected disabled hidden>Choose a score..</option>
-								    <?php Populate_Dropdown20(); ?>
-				   				</select>
+								<p>Elegance and Sophistication</p>
+								<select name="eleSop">
+									<option selected disabled hidden>Choose a score..</option>
+									<?php Populate_Dropdown20(); ?>
+								</select>
 
-				   				<input type="submit" value="Save"> 
-					  	</div>
+								<input type="submit" value="Save"> 
+							</div>
 					  </div>
-
-				  </div>
+					  <!--CANDIDATE ITEM-->
+					  <?php } ?>
+					</div>
 				</div>
 
 
@@ -159,6 +196,7 @@ include("session.php");
 
 					   <div class="row-grid">
 					 	 <div class="col-md-6 col-md-6 blacky">
+					 	 		<form action="" method="POST">
 					   			<h3>Criteria</h3> 
 
 					   			<p>Poise and Bearing</p>
@@ -186,6 +224,7 @@ include("session.php");
 					   				</select>
 
 					   				<input type="submit" value="Save"> 
+					   		</form>
 					  	</div>
 					  </div>
 
@@ -197,3 +236,4 @@ include("session.php");
 
 </body>
 </html>
+

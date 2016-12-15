@@ -31,37 +31,24 @@ if(isset($_COOKIE['ID_your_site'])){ //if there is, it logs you in and directes 
  		$_POST['email'] = addslashes($_POST['email']);
  	}*/
 
- 	$check = mysqli_query($conect, "SELECT * FROM judges WHERE access_key = '".md5($_POST['pass']."'")) or die(mysql_error());
+ 	//$check = mysqli_query($conect, "SELECT * FROM judges WHERE access_key = '".md5($_POST['pass']."'")) or die(mysql_error());
+ 	$check = mysqli_query($conect, "SELECT * FROM judges WHERE id = '".$_POST['pass']."'") or die(mysql_error());
 
  //Gives error if user dosen't exist
  $check2 = mysqli_num_rows($check);
  if ($check2 == 0){
 	die('That user does not exist in our database.<br /><br />If you think this is wrong <a href="login.php">try again</a>.');
-}else{
+ }else{
 	
 	while($info = mysqli_fetch_array( $check )){
 		$_POST['pass'] = stripslashes($_POST['pass']);
 	 	$info['passcode'] = stripslashes($info['passcode']);
 	 	$_POST['pass'] = md5($_POST['pass']);
 
-	/*
-		//gives error if the password is wrong
-	 	if ($_POST['pass'] != $info['passcode']){
-	 		die('Incorrect password, please <a href="login.php">try again</a>.');
-	 	}*/
-		
-		//else{ // if login is ok then we add a cookie 
-			$_POST['username'] = stripslashes($_POST['username']); 
-			$hour = time() + 3600; 
-			setcookie(ID_your_site, $_POST['username'], $hour); 
-			setcookie(Key_your_site, $_POST['pass'], $hour);	 
-	 
-			//then redirect them to the members area 
-			header("Location: Menu.php"); 
-		//}
+		header("Location: Menu.php"); 
 	}
 
-}
+ }
 
 }
 else{
@@ -76,7 +63,7 @@ else{
 
  <tr><td>Passcode:</td><td> 
 
- <input type="password" name="pass" maxlength="50"> 
+ <input type="password" name="pass" maxlength="50" required> 
 
  </td></tr> 
 
@@ -92,4 +79,6 @@ else{
 
  <?php 
  }
+
+
  ?> 

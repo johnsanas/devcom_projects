@@ -89,9 +89,6 @@ body {
 	background-repeat: no-repeat;
 }
 
-
-
-
 .headTitle {
 	width: 80%;
 	height: 100px;
@@ -100,7 +97,6 @@ body {
 	text-align: center;
 	color:blue;
 }
-
 
 .headTitle h1 {
 	font-size: 33px;
@@ -445,6 +441,14 @@ body {
 .shadow{
 	box-shadow: 5px 5px 10px black;
 }
+
+/* INDEX PAGE*/
+.align-center{
+	text-align: center;
+	font: 50px;
+}
+
+.
 
 
 
