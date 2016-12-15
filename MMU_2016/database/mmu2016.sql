@@ -9,7 +9,6 @@
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
-=======
 -- Host: localhost    Database: mmu2016
 -- ------------------------------------------------------
 -- Server version	5.6.26
@@ -53,7 +52,7 @@ INSERT INTO `admin` (`id`, `id_number`, `password`, `first_name`, `last_name`) V
 (2, 1, 0, 'Kiers', 'Labrador');
 
 -- --------------------------------------------------------
-=======
+
 LOCK TABLES `admin` WRITE;
 /*!40000 ALTER TABLE `admin` DISABLE KEYS */;
 /*!40000 ALTER TABLE `admin` ENABLE KEYS */;
@@ -105,7 +104,7 @@ INSERT INTO `candidates` (`id`, `candidate_number`, `first_name`, `middle_name`,
 (17, 8, 'Christian Van', '', 'Supe', 'Bachelor o', 'K11', 'Male');
 
 -- --------------------------------------------------------
-=======
+
 LOCK TABLES `candidates` WRITE;
 /*!40000 ALTER TABLE `candidates` DISABLE KEYS */;
 INSERT INTO `candidates` VALUES (1,1,'Roni','','Cruz','Bachelor o','K11','Female'),(2,2,'Daniele','','Bigcas','Bachelor o','K11','Female'),(3,3,'Christine','','Lerma','Bachelor o','K11','Female'),(4,4,'Christine','','Moncada','Bachelor o','K11','Female'),(5,5,'Mayline','','Penoliar','Bachelor o','K11','Female'),(6,6,'Ana Cris','','De Jesus','Bachelor o','K11','Female'),(7,7,'Janine','','Anago','Bachelor o','K11','Female'),(8,8,'Christine','','Digas','Bachelor o','K11','Female'),(9,9,'Deborah','','Macapagal','Bachelor o','K11','Female'),(10,1,'John Paul','','Obiar','Bachelor o','K11','Male'),(11,2,'Jay-Ar','','Patalinghug','Bachelor o','K11','Male'),(12,3,'Kim Irvin','','Pardo','Bachelor o','K11','Male'),(13,4,'Gerald','','Capil','Bachelor o','K11','Male'),(14,5,'Ronald','','Mendoz','Bachelor o','K11','Male'),(15,6,'Carlo','','Salaya','Bachelor o','K11','Male'),(16,7,'Richard','','De Leon','Bachelor o','K11','Male'),(17,8,'Christian Van','','Supe','Bachelor o','K11','Male');
@@ -208,7 +207,7 @@ ALTER TABLE `judges`
 --
 ALTER TABLE `votes`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-=======
+
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
 /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
