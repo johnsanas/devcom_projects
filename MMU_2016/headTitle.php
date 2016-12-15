@@ -5,6 +5,7 @@ include("connection.php");
 	$namer = mysqli_query($conn,$nameq);
 	$row = mysqli_fetch_assoc($namer);
 	$fullname = $row['first_name']." ".$row['last_name'];
+	$judge_id = $row['id'];
 ?>
 
 <div class="headTitle">

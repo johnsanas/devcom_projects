@@ -149,6 +149,7 @@ include("session.php");
 					 	 	
 					 	 	$row = mysqli_fetch_array($result);
 
+					 	 	$candidateid = $row['id'];
 					 	 	$candidateno = $row['candidate_number'];
 					 	 	$candidateimg = $row['candidate_img'];
 							}
@@ -163,30 +164,30 @@ include("session.php");
 					   			<h3>Criteria</h3> 
 					   		<form action="" method="post">
 					   			<p>Poise and Bearing</p>
-					   				<select name="m_poiseBear">
+					   				<select name="m_poiseBear" requireds>
 					   					<option selected disabled hidden>Choose a score..</option>
 									    <?php Populate_Dropdown30(); ?>
 					   				</select>
 
 					   			<p>Carriage</p>
-					   				<select name="m_carriage">
+					   				<select name="m_carriage" required>
 					   					<option selected disabled hidden>Choose a score..</option>
 									    <?php Populate_Dropdown30(); ?>
 					   				</select>
 
 					   			<p>Beauty</p>
-					   				<select name="m_beauty">
+					   				<select name="m_beauty" required>
 					   					<option selected disabled hidden>Choose a score..</option>
 									    <?php Populate_Dropdown20(); ?>
 					   				</select>
 
 					   			<p>Elegance and Sophistication</p>
-					   				<select name="m_eleSop">
+					   				<select name="m_eleSop" required>
 					   					<option selected disabled hidden>Choose a score..</option>
 									    <?php Populate_Dropdown20(); ?>
 					   				</select>
 
-					   				<input type="submit" value="Save"> 
+					   				<input type="submit" name="m_submit" value="Save"> 
 
 					   		</form>
 					  	</div>
@@ -205,25 +206,37 @@ include("session.php");
 
 if (isset($_POST['m_submit'])) { 
 
-		$judge_id = $_POST['judge_id'];
-		$candidate_id = $_POST['candidate_id'];
-		$category = $_POST['category'];
-		$sub_category = $_POST['sub_category'];
-		$score = $_POST['score'];
-		
+		$judge_id = $judge_id;
+		$candidate_id = $candidateid;
+		$category = "School Wear";
+		$score = $_POST['m_poiseBear'];
 
-		
-
-		$sql = "INSERT INTO votes (date_time, judge_id, candidate_id, category, sub_category, score) VALUES('$id_number', '$first_name', '$last_name', '$password')";
+		$sub_category = "PoiseBear";
+		$sql = "INSERT INTO votes (date_time, judge_id, candidate_id, category, sub_category, score) VALUES(now(), $judge_id, $candidate_id, '$category', '$sub_category' , '$score')";
 		$query = mysqli_query($conn, $sql);
 
+		$sub_category = "Carriage";
+		$score = $_POST['m_carriage'];
+		$sql = "INSERT INTO votes (date_time, judge_id, candidate_id, category, sub_category, score) VALUES(now(), $judge_id, $candidate_id, '$category', '$sub_category' , '$score')";
+		$query = mysqli_query($conn, $sql);
+
+		$sub_category = "Beauty";
+		$score = $_POST['m_beauty'];
+		$sql = "INSERT INTO votes (date_time, judge_id, candidate_id, category, sub_category, score) VALUES(now(), $judge_id, $candidate_id, '$category', '$sub_category' , '$score')";
+		$query = mysqli_query($conn, $sql);
+
+		$sub_category = "EleSop";
+		$score = $_POST['m_eleSop'];
+		$sql = "INSERT INTO votes (date_time, judge_id, candidate_id, category, sub_category, score) VALUES(now(), $judge_id, $candidate_id, '$category', '$sub_category' , '$score')";
+		$query = mysqli_query($conn, $sql);
+
+
+
 		if($query){
-			echo "<script>alert('Admin Successfully Added')</script>";
+			echo "<script>alert('Voted Successfully Added')</script>";
 		}else{
-			echo "<script>alert('Failed to add administrator')</script>";
+			echo "<script>alert('Failed to add Votes')</script>";
 		}
 }
 
 ?>
-
-insert into (date_time, judge_id, candidate_id, category, sub_category_ score) values (now(), $jud)
