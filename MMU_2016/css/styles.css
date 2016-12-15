@@ -410,3 +410,17 @@ body {
 .backbutton a:hover {
 	text-decoration: none;
 }
+
+
+/* ADMINISTRATOR */
+
+.contentMain .adminButtons {
+	width: 100%;
+	background-color: black;
+	padding: 20px 30px;
+	font-family: Century Gothic;
+	font-size: 16px;
+	color: rgb(127,127,127);
+
+}
+
