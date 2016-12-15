@@ -98,7 +98,9 @@ body {
 	margin-top: 20px;
 	clear: both;
 	text-align: center;
+	color:blue;
 }
+
 
 .headTitle h1 {
 	font-size: 33px;
@@ -117,6 +119,9 @@ body {
 	font-family: century gothic;
 	float: left;
 	margin-left: 100px;
+
+	/*MODIFIED*/
+	margin-left:45px;
 }
 
 .headTitle h5 {
@@ -124,8 +129,11 @@ body {
 	color: rgb(118,83,23);
 	font-family: century gothic;
 	float: left;
-	margin-left: -165px;
+	/*margin-left: -165px;*/
 	margin-top: 30px;
+
+	/*MODIFIED*/
+	margin-left:-215px;
 }
 
 .headTitle h4 {

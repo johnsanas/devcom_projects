@@ -113,7 +113,7 @@ include("connection.php");
 
 					   <div class="row-grid">
 					 	 <div class="col-md-6 col-md-6 blacky">
-					 	 		<form>
+					 	 		<form action="" method="POST">
 					   			<h3>Criteria</h3> 
 
 					   			<p>Poise and Bearing</p>
@@ -155,8 +155,20 @@ include("connection.php");
 </html>
 
 <?php
+	if(isset($_POST['saveCandidate'])){
+		$candidate_number = $_POST['candidate_number'];
+		$id_number = $_POST['id_number'];
+		$first_name = $_POST['first_name'];
+		$last_name = $_POST['last_name'];
+		$college = $_POST['college'];
+		$gender = $_POST['gender'];
 
+		$sql = "INSERT INTO candidates (candidate_number, id_number, first_name, last_name, college, gender) VALUES('$candidate_number', '$id_number', '$first_name', '$last_name', '$college', '$gender')";
+		$query = mysqli_query($conn, $sql);
 
-
-
+		if($query){
+			echo "<script>alert('Candidate Successfully Added')</script>";
+		}else{
+			echo "<script>alert('Failed to add candidate!')</script>";
+		}
 ?>
