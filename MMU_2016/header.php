@@ -40,6 +40,7 @@ function Populate_Dropdown9(){
 	?>
 		<option value="<?php echo $num; ?>"><?php echo $num; ?></option>
 	<?php
+		$num++;
 	}
 }
 
@@ -50,6 +51,7 @@ function Populate_Dropdown8(){
 	?>
 		<option value="<?php echo $num; ?>"><?php echo $num; ?></option>
 	<?php
+		$num++;
 	}
 }
 ?>
