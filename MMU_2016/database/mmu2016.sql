@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 15, 2016 at 05:56 AM
+-- Generation Time: Dec 15, 2016 at 07:14 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -50,6 +50,29 @@ CREATE TABLE `candidates` (
   `id_number` varchar(8) NOT NULL,
   `gender` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `candidates`
+--
+
+INSERT INTO `candidates` (`id`, `candidate_number`, `first_name`, `middle_name`, `last_name`, `college`, `id_number`, `gender`) VALUES
+(1, 1, 'Roni', '', 'Cruz', 'Bachelor o', 'K11', 'Female'),
+(2, 2, 'Daniele', '', 'Bigcas', 'Bachelor o', 'K11', 'Female'),
+(3, 3, 'Christine', '', 'Lerma', 'Bachelor o', 'K11', 'Female'),
+(4, 4, 'Christine', '', 'Moncada', 'Bachelor o', 'K11', 'Female'),
+(5, 5, 'Mayline', '', 'Penoliar', 'Bachelor o', 'K11', 'Female'),
+(6, 6, 'Ana Cris', '', 'De Jesus', 'Bachelor o', 'K11', 'Female'),
+(7, 7, 'Janine', '', 'Anago', 'Bachelor o', 'K11', 'Female'),
+(8, 8, 'Christine', '', 'Digas', 'Bachelor o', 'K11', 'Female'),
+(9, 9, 'Deborah', '', 'Macapagal', 'Bachelor o', 'K11', 'Female'),
+(10, 1, 'John Paul', '', 'Obiar', 'Bachelor o', 'K11', 'Male'),
+(11, 2, 'Jay-Ar', '', 'Patalinghug', 'Bachelor o', 'K11', 'Male'),
+(12, 3, 'Kim Irvin', '', 'Pardo', 'Bachelor o', 'K11', 'Male'),
+(13, 4, 'Gerald', '', 'Capil', 'Bachelor o', 'K11', 'Male'),
+(14, 5, 'Ronald', '', 'Mendoz', 'Bachelor o', 'K11', 'Male'),
+(15, 6, 'Carlo', '', 'Salaya', 'Bachelor o', 'K11', 'Male'),
+(16, 7, 'Richard', '', 'De Leon', 'Bachelor o', 'K11', 'Male'),
+(17, 8, 'Christian Van', '', 'Supe', 'Bachelor o', 'K11', 'Male');
 
 -- --------------------------------------------------------
 
@@ -124,7 +147,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `candidates`
 --
 ALTER TABLE `candidates`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT for table `judges`
 --

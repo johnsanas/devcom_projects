@@ -160,6 +160,37 @@
 					</div>
 
 				</div>
+
+				<div class="row-grid">
+
+				<?php 
+					$sql = "SELECT * FROM candidates WHERE gender='Female'";
+					$query = mysqli_query($conn, $sql);
+
+					while($result = mysqli_fetch_assoc($query)){
+				?>
+						<div class="col-sm-3 col-md-4">
+							<img src="img/FemaleCandidate<?php echo $result['candidate_number'];?>.jpg" class="thumbnail shadow">
+							<label class="canNum">Female Candidate No. <?php echo $result['candidate_number']; ?></label>
+						</div>
+				<?php
+					}
+
+					$sql = "SELECT * FROM candidates WHERE gender='Male'";
+					$query = mysqli_query($conn, $sql);
+
+					while($result = mysqli_fetch_assoc($query)){
+				?>
+						<div class="col-sm-3 col-md-4">
+							<img src="img/MaleCandidate<?php echo $result['candidate_number'];?>.jpg" class="thumbnail shadow">
+							<label class="canNum">Male Candidate No. <?php echo $result['candidate_number']; ?></label>
+						</div>
+				<?php
+					}
+
+				?>
+				</div>
+				
 		</div>
 </body>
 </html>
@@ -182,6 +213,9 @@
 		}else{
 			echo "<script>alert('Failed to add candidate!')</script>";
 		}
+?>
+		<script>window.location.href = 'admin.php' </script>
+<?php
 	}
 ?>
 
