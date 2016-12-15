@@ -21,7 +21,7 @@
 					      	</div>
 
 					      	<div class="modal-body">
-						        <form action="" method="POST">
+						        <form action="" method="POST" enctype="multipart/form-data">
 						          <div class="form-group">
 						            <label for="recipient-name" class="control-label">Candidate Number:</label>
 						            <input type="text" class="form-control" name="candidate_number" required>
@@ -45,6 +45,10 @@
 						          <div class="form-group">
 						            <label for="message-text" class="control-label">College:</label>
 						            <input type="text" class="form-control" name="college" required>
+						          </div>
+						          <div class="form-group">
+						          	<label class="control-label">Picture:</label>
+						          	<input type="file" class="form-control" name="candidateimg" required>
 						          </div>
 
 						        
@@ -146,6 +150,20 @@
 
 <?php
 	if(isset($_POST['saveCandidate'])){
+
+		function GetImageExtension($imagetype)
+     {
+       if(empty($imagetype)) return false;
+       switch($imagetype)
+       {
+           case 'image/bmp': return '.bmp';
+           case 'image/gif': return '.gif';
+           case 'image/jpeg': return '.jpg';
+           case 'image/png': return '.png';
+           default: return false;
+       }
+     }
+
 		$candidate_number = $_POST['candidate_number'];
 		$id_number = $_POST['id_number'];
 		$first_name = $_POST['first_name'];
@@ -153,17 +171,32 @@
 		$college = $_POST['college'];
 		$gender = $_POST['gender'];
 
-		$sql = "INSERT INTO candidates (candidate_number, id_number, first_name, last_name, college, gender) VALUES('$candidate_number', '$id_number', '$first_name', '$last_name', '$college', '$gender')";
-		$query = mysqli_query($conn, $sql);
+		$file_name=$_FILES["candidateimg"]["name"];
+	    $temp_name=$_FILES["candidateimg"]["tmp_name"];
+	    $imgtype=$_FILES["candidateimg"]["type"];
+	    $ext= GetImageExtension($imgtype);
+	    $imagename=$_FILES["candidateimg"]["name"];
+	    $target_path = "/devcom_projects/MMU_2016/uploadedimg/".$imagename;
+	    $path="C://xampp/htdocs/";
 
-		if($query){
-			echo "<script>alert('Candidate Successfully Added')</script>";
-		}else{
-			echo "<script>alert('Failed to add candidate!')</script>";
-		}
+
+  		if(move_uploaded_file($temp_name,$path.$target_path)) {
+
+
+			$sql = "INSERT INTO candidates (candidate_number, id_number, first_name, last_name, college, gender, candidate_img) VALUES('$candidate_number', '$id_number', '$first_name', '$last_name', '$college', '$gender', '$target_path')";
+			$query = mysqli_query($conn, $sql);
+
+			if($query){
+				echo "<script>alert('Candidate Successfully Added')</script>";
+			}else{
+				echo "<script>alert('Failed to add candidate!')</script>";
+			}
+		
 ?>
 		<script>window.location.href = 'candidates.php' </script>
+		
 <?php
+}
 	}
 ?>
 

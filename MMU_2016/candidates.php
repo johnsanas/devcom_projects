@@ -27,36 +27,38 @@
 					$sql = "SELECT * FROM candidates WHERE gender='Female' ORDER BY candidate_number";
 					$query = mysqli_query($conn, $sql);
 
-					while($result = mysqli_fetch_assoc($query)){	
+					if (mysqli_num_rows($query)>0){
+					while($result =  mysqli_fetch_array($query)){
 						$id = $result['id'];
 						$candidate_number = $result['candidate_number'];
+						$candidateimg = $result['candidate_img'];
 						include('editDelete_modal.php');
 				?>
 						<div class="col-sm-3 col-md-4">
-							<img src="img/FemaleCandidate<?php echo $result['candidate_number'];?>.jpg" class="thumbnail shadow">
+							<img src="<?php echo $candidateimg;?>" class="thumbnail shadow">
 							<label class="canNum">Female Candidate No. <?php echo $result['candidate_number']; ?>
 								<span class="glyphicon glyphicon-pencil" aria-hidden="true" data-toggle="modal" data-target="#EditCandidate<?php echo $id;?>"></span>
-						
-
+					
 								<span class="glyphicon glyphicon-pencil" aria-hidden="true" data-toggle="modal" data-target="#DeleteCandidate<?php echo $id;?>"></span> 
 							</label>
 
 						</div>
 				<?php
-						
+					}
 					}
 
 
 					$sql = "SELECT * FROM candidates WHERE gender='Male' ORDER BY candidate_number";
 					$query = mysqli_query($conn, $sql);
-
-					while($result = mysqli_fetch_assoc($query)){
+					if (mysqli_num_rows($query)>0){
+					while($result = mysqli_fetch_array($query)){
 						$id = $result['id'];
 						$candidate_number = $result['candidate_number'];
+						$candidateimg = $result['candidate_img'];
 						include('editDelete_modal.php');
 				?>
 						<div class="col-sm-3 col-md-4">
-							<img src="img/MaleCandidate<?php echo $result['candidate_number'];?>.jpg" class="thumbnail shadow">
+							<img src="<?php echo $candidateimg;?>" class="thumbnail shadow">
 							<label class="canNum">Male Candidate No. <?php echo $result['candidate_number']; ?>
 								<span class="glyphicon glyphicon-pencil" aria-hidden="true" data-toggle="modal" data-target="#EditCandidate<?php echo $id;?>"></span>
 
@@ -66,7 +68,9 @@
 							
 						</div>
 				<?php
-					}
+					
+				}
+			}
 
 				?>
 				</div>

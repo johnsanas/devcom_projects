@@ -7,7 +7,7 @@ include("session.php");
 
 <head>
 	<title>MMU | CANDIDATES</title>
-	<?php include("header.php"); ?>
+	<?php include("header.php"); include("connection.php"); ?>
 </head>
 
 <body class="categoryHomeBC">
@@ -40,19 +40,42 @@ include("session.php");
 
 				  	<div class="candidateSelection">
 					<label id="candF">Female Candidate #</label>
+					<form method="POST" action="">
 						<select name="candnumberF" id="candf">
-		   					<option selected disabled hidden>Choose candidate no.</option>
+		   					<option value="1">Choose candidate no.</option>
 						    <?php Populate_Dropdown9(); ?>
 					   	</select>
-					<button class="button btn-default Fbutton" name="FnoSel">SELECT</button>
+					<input class="button btn-default Fbutton" name="FnoSel" type="submit" value="SELECT">
+					</form>
+					
 
 				</div>
 				   
 				      
 				      <div class="row-grid">
 					 	 <div class="col-md-6 col-md-6 whitey">
-					 	 	<img src="img/FemaleCandidate4.jpg" id="leftimage">
-					 	 	<p style="width:100%">Candidate # 2</p>
+					 	 	<?php
+
+					 	 	if(isset($_POST['FnoSel'])){
+								$femalepic = $_POST['candnumberF'];
+					 	 	}
+					 	 	else {
+					 	 		$femalepic = "1";
+					 	 	}
+
+					 	 	$sql = "SELECT * FROM candidates WHERE gender='Female'  AND candidate_number='$femalepic'";
+					 	 	$result = mysqli_query($conn, $sql);
+					 	 	if (mysqli_num_rows($result)>0) {
+					 	 	
+					 	 	
+					 	 	$row = mysqli_fetch_array($result);
+
+					 	 	$candidateno = $row['candidate_number'];
+					 	 	$candidateimg = $row['candidate_img'];
+}
+					 	 	?>
+					 	 	<img src="<?php echo $candidateimg;?>" id="leftimage">
+					 	 	<p style="width:100%">Candidate # <?php echo "$candidateno";?></p>
 						</div>
 					  </div>
 
@@ -97,19 +120,40 @@ include("session.php");
 				   
 				<div class="candidateSelection">
 					<label  id="candM">Male Candidate #</label>
+					<form method="POST" action="">
 					<select name="candnumberM" id="candf">
-	   					<option selected disabled hidden>Choose candidate no.</option>
+	   					<option value="1">Choose candidate no.</option>
 					    <?php Populate_Dropdown8(); ?>
 					   	</select>
-					<button class="button btn-default Mbutton" name="MnoSel">SELECT</button>
-					
+					<input class="button btn-default Mbutton" name="MnoSel" type="submit" value="SELECT">
+					</form>
 
 				</div>
 				      
 				      <div class="row-grid">
 					 	 <div class="col-md-6 col-md-6 whitey">
-					 	 	<img src="img/MaleCandidate7.jpg" id="leftimage">
-					 	 	<p style="width:100%">Candidate # 2</p>
+					 	 	<?php
+
+					 	 	if(isset($_POST['MnoSel'])){
+								$malepic = $_POST['candnumberM'];
+					 	 	}
+					 	 	else {
+					 	 		$malepic = "1";
+					 	 	}
+
+					 	 	$sql = "SELECT * FROM candidates WHERE gender='Male' AND candidate_number='$malepic'";
+					 	 	$result = mysqli_query($conn, $sql);
+					 	 	if (mysqli_num_rows($result)>0) {
+					 	 	
+					 	 	
+					 	 	$row = mysqli_fetch_array($result);
+
+					 	 	$candidateno = $row['candidate_number'];
+					 	 	$candidateimg = $row['candidate_img'];
+							}
+							?>
+					 	 	<img src="<?php echo $candidateimg;?>" id="leftimage">
+					 	 	<p style="width:100%">Candidate # <?php echo "$candidateno";?></p>
 						</div>
 					  </div>
 
