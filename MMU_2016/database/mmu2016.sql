@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.6.26, for Win32 (x86)
 --
-<<<<<<< HEAD
+
 -- Host: localhost
 -- Generation Time: Dec 15, 2016 at 10:07 AM
 -- Server version: 10.1.16-MariaDB
@@ -13,7 +13,7 @@ SET time_zone = "+00:00";
 -- Host: localhost    Database: mmu2016
 -- ------------------------------------------------------
 -- Server version	5.6.26
->>>>>>> ba5301f7c2b876f8680bd1368a2c32c5b771316d
+
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -47,7 +47,7 @@ CREATE TABLE `admin` (
 -- Dumping data for table `admin`
 --
 
-<<<<<<< HEAD
+
 INSERT INTO `admin` (`id`, `id_number`, `password`, `first_name`, `last_name`) VALUES
 (1, 0, 0, 'Aldwin', 'Labrador'),
 (2, 1, 0, 'Kiers', 'Labrador');
@@ -58,7 +58,7 @@ LOCK TABLES `admin` WRITE;
 /*!40000 ALTER TABLE `admin` DISABLE KEYS */;
 /*!40000 ALTER TABLE `admin` ENABLE KEYS */;
 UNLOCK TABLES;
->>>>>>> ba5301f7c2b876f8680bd1368a2c32c5b771316d
+
 
 --
 -- Table structure for table `candidates`
@@ -84,7 +84,7 @@ CREATE TABLE `candidates` (
 -- Dumping data for table `candidates`
 --
 
-<<<<<<< HEAD
+
 INSERT INTO `candidates` (`id`, `candidate_number`, `first_name`, `middle_name`, `last_name`, `college`, `id_number`, `gender`) VALUES
 (1, 1, 'Roni', '', 'Cruz', 'Bachelor', 'K11', 'Female'),
 (2, 2, 'Daniele', '', 'Bigcas', 'Bachelor o', 'K11', 'Female'),
@@ -111,7 +111,7 @@ LOCK TABLES `candidates` WRITE;
 INSERT INTO `candidates` VALUES (1,1,'Roni','','Cruz','Bachelor o','K11','Female'),(2,2,'Daniele','','Bigcas','Bachelor o','K11','Female'),(3,3,'Christine','','Lerma','Bachelor o','K11','Female'),(4,4,'Christine','','Moncada','Bachelor o','K11','Female'),(5,5,'Mayline','','Penoliar','Bachelor o','K11','Female'),(6,6,'Ana Cris','','De Jesus','Bachelor o','K11','Female'),(7,7,'Janine','','Anago','Bachelor o','K11','Female'),(8,8,'Christine','','Digas','Bachelor o','K11','Female'),(9,9,'Deborah','','Macapagal','Bachelor o','K11','Female'),(10,1,'John Paul','','Obiar','Bachelor o','K11','Male'),(11,2,'Jay-Ar','','Patalinghug','Bachelor o','K11','Male'),(12,3,'Kim Irvin','','Pardo','Bachelor o','K11','Male'),(13,4,'Gerald','','Capil','Bachelor o','K11','Male'),(14,5,'Ronald','','Mendoz','Bachelor o','K11','Male'),(15,6,'Carlo','','Salaya','Bachelor o','K11','Male'),(16,7,'Richard','','De Leon','Bachelor o','K11','Male'),(17,8,'Christian Van','','Supe','Bachelor o','K11','Male');
 /*!40000 ALTER TABLE `candidates` ENABLE KEYS */;
 UNLOCK TABLES;
->>>>>>> ba5301f7c2b876f8680bd1368a2c32c5b771316d
+
 
 --
 -- Table structure for table `judges`
@@ -171,7 +171,7 @@ LOCK TABLES `votes` WRITE;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
-<<<<<<< HEAD
+
 --
 -- Indexes for table `judges`
 --
@@ -212,7 +212,6 @@ ALTER TABLE `votes`
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
 /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
->>>>>>> ba5301f7c2b876f8680bd1368a2c32c5b771316d
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
