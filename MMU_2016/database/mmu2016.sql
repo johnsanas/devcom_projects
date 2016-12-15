@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 15, 2016 at 07:14 AM
+-- Generation Time: Dec 15, 2016 at 10:07 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -34,6 +34,14 @@ CREATE TABLE `admin` (
   `last_name` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`id`, `id_number`, `password`, `first_name`, `last_name`) VALUES
+(1, 0, 0, 'Aldwin', 'Labrador'),
+(2, 1, 0, 'Kiers', 'Labrador');
+
 -- --------------------------------------------------------
 
 --
@@ -56,7 +64,7 @@ CREATE TABLE `candidates` (
 --
 
 INSERT INTO `candidates` (`id`, `candidate_number`, `first_name`, `middle_name`, `last_name`, `college`, `id_number`, `gender`) VALUES
-(1, 1, 'Roni', '', 'Cruz', 'Bachelor o', 'K11', 'Female'),
+(1, 1, 'Roni', '', 'Cruz', 'Bachelor', 'K11', 'Female'),
 (2, 2, 'Daniele', '', 'Bigcas', 'Bachelor o', 'K11', 'Female'),
 (3, 3, 'Christine', '', 'Lerma', 'Bachelor o', 'K11', 'Female'),
 (4, 4, 'Christine', '', 'Moncada', 'Bachelor o', 'K11', 'Female'),
@@ -142,12 +150,12 @@ ALTER TABLE `votes`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `candidates`
 --
 ALTER TABLE `candidates`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 --
 -- AUTO_INCREMENT for table `judges`
 --
