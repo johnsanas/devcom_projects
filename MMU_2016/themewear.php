@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 <?php 
 include("session.php");
 include("connection.php");
 ?>
+=======
+<?php
+include("session.php");
+?>
+
+>>>>>>> 3a3e32c8cd38f7be4d9bc4e1876fd41b3711f1b2
 <!DOCTYPE HTML>
 <html>
 
@@ -14,13 +21,20 @@ include("connection.php");
 
 		<div class="categoryHome">
 
+<<<<<<< HEAD
 			<div class="headTitle">
 				<h6><?php echo($fullname); ?></h6>
+=======
+			<!--<div class="headTitle">
+				<h6>Mr. Aldwin Labrador</h6>
+>>>>>>> 3a3e32c8cd38f7be4d9bc4e1876fd41b3711f1b2
 				<h5>Judge</h5>
 				<h1>THEME WEAR</h1>
 				<h4>MR & MS UMAK</h4>
 				<h3>2016</h3>
-			</div>
+			</div>-->
+
+			<?php include("headTitle.php"); ?>
 
 			<div class="contentMain">
 				<div class="instructions">

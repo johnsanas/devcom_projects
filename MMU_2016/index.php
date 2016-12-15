@@ -52,10 +52,8 @@ require("connection.php");
 		else{
 			$row = mysqli_fetch_assoc($loginr);
 			session_start();
-			$_SESSION["judge_id"] = $row['id'];;
-			echo("<script>alert('Correct access key');</script>");
+			$_SESSION["judge_id"] = $row['id'];
 			echo("<script>window.location='category.php';</script>");
-			
 		}
 	}
 ?>
