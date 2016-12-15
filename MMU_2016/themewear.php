@@ -1,14 +1,14 @@
-<<<<<<< HEAD
+
 <?php 
 include("session.php");
 include("connection.php");
-?>
-=======
-<?php
-include("session.php");
+
+	$nameq = "select * from judges where id='".$_SESSION['judge_id']."'";
+	$namer = mysqli_query($conn,$nameq);
+	$row = mysqli_fetch_assoc($namer);
+	$fullname = $row['first_name']." ".$row['last_name'];
 ?>
 
->>>>>>> 3a3e32c8cd38f7be4d9bc4e1876fd41b3711f1b2
 <!DOCTYPE HTML>
 <html>
 
@@ -21,13 +21,13 @@ include("session.php");
 
 		<div class="categoryHome">
 
-<<<<<<< HEAD
+
 			<div class="headTitle">
-				<h6><?php echo($fullname); ?></h6>
-=======
+	
+
 			<!--<div class="headTitle">
+				h6><?php echo($fullname); ?></h6>
 				<h6>Mr. Aldwin Labrador</h6>
->>>>>>> 3a3e32c8cd38f7be4d9bc4e1876fd41b3711f1b2
 				<h5>Judge</h5>
 				<h1>THEME WEAR</h1>
 				<h4>MR & MS UMAK</h4>
@@ -168,21 +168,3 @@ include("session.php");
 </body>
 </html>
 
-<?php
-	if(isset($_POST['saveCandidate'])){
-		$candidate_number = $_POST['candidate_number'];
-		$id_number = $_POST['id_number'];
-		$first_name = $_POST['first_name'];
-		$last_name = $_POST['last_name'];
-		$college = $_POST['college'];
-		$gender = $_POST['gender'];
-
-		$sql = "INSERT INTO candidates (candidate_number, id_number, first_name, last_name, college, gender) VALUES('$candidate_number', '$id_number', '$first_name', '$last_name', '$college', '$gender')";
-		$query = mysqli_query($conn, $sql);
-
-		if($query){
-			echo "<script>alert('Candidate Successfully Added')</script>";
-		}else{
-			echo "<script>alert('Failed to add candidate!')</script>";
-		}
-?>

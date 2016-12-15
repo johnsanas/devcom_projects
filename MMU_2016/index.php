@@ -10,6 +10,7 @@ require("connection.php");
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css">
 	<script type="text/javascript" href="js/bootstrap/bootstrap.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 </head>
 
@@ -20,22 +21,32 @@ require("connection.php");
 			<h4>WELCOME to</h4>
 			<h3>Pageant Judging System</h3>
 			<h2>2016</h2>
-			<form action = "" method = "post">
+			<form id="passcode_Input" action = "" method = "post">
 				<div class="form-group enterPasscode">
-					<input type="text" class="form-control" id="passcode" name="passcode" placeholder="Please enter your passcode here..">
+					<input type="PASSWORD" class="form-control align-center" id="passcode" name="passcode" placeholder="Passcode" >
 					<br>
-					<input type="submit" text="Submit" name="btnSubmit" class="btn btn-success">
+					<input type="submit" value="Log in" name="btnSubmit" class="btn btn-success">
 				</div>
 			</form>
 			<p>Develop by LabradrorVerdeVillaverVillete</p>
 		</div>
 
+<script>
+	$(document).ready(function(){
+		$('#passcode').bind('keyup', function(e){
+	      if (($(this).val().length) == 4){
+	      	$("#passcode_Input").submit();
+	      }
+		});
+	});
+
+</script>
 
 </body>
 </html>
 
 <?php
-	if(isset($_POST["btnSubmit"])){
+	if(isset($_POST["passcode"])){
 		$passcode = $_POST["passcode"];
 		$loginq = "select * from judges where access_key='".$passcode."'";
 		/*$loginq = "SELECT * FROM ";

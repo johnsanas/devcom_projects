@@ -1,3 +1,7 @@
+<?php
+
+?>
+
 	<div class="headTitle">
 		<div class="panel-left22">
 			<h6>Mr. Aldwin Labrador</h6>
