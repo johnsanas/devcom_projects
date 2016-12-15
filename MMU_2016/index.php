@@ -38,6 +38,12 @@ require("connection.php");
 	if(isset($_POST["btnSubmit"])){
 		$passcode = $_POST["passcode"];
 		$loginq = "select * from judges where access_key='".$passcode."'";
+		/*$loginq = "SELECT * FROM ";
+		$loginq .= "judges";
+		$loginq .= "WHERE access_key ='";
+		$loginq .= $passcode;
+		$loginq .= "'";*/
+
 		$loginr = mysqli_query($conn,$loginq);
 
 		if(mysqli_num_rows($loginr)==0){

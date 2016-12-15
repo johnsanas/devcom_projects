@@ -3,7 +3,7 @@
 
 <head>
 	<title>MMU | ADMIN Candidates</title>
-	<?php include("header.php"); include("connection.php"); ?>
+	<?php include_once("header.php"); require("connection.php"); ?>
 </head>
 
 <body class="categoryHomeBC">
