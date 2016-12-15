@@ -9,14 +9,6 @@
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
--- Host: localhost    Database: mmu2016
--- ------------------------------------------------------
-<<<<<<< HEAD
--- Server version 5.6.26
-=======
--- Server version	5.6.26
->>>>>>> 6650ed8f907e8e690d2f98871f142269978a87f4
-
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
