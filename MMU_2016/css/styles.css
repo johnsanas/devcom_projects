@@ -100,6 +100,12 @@ body {
 	text-align: center;
 }
 
+.headTitle .panel-left22{
+	text-align:left;
+	background-color:red;
+	width:1000px;
+}
+
 .headTitle h1 {
 	font-size: 33px;
 	color: white;
@@ -116,7 +122,10 @@ body {
 	color: rgb(127,127,127);
 	font-family: century gothic;
 	float: left;
-	margin-left: 100px;
+	/*margin-left: 100px;*/
+
+	/*MODIFIED*/
+	margin-left:0px;
 }
 
 .headTitle h5 {
@@ -124,8 +133,15 @@ body {
 	color: rgb(118,83,23);
 	font-family: century gothic;
 	float: left;
-	margin-left: -165px;
-	margin-top: 30px;
+	/*margin-left: -165px;*/
+	/*margin-top: 30px;*/
+
+	/*MODIFIED*/
+	margin-left:0px;
+	text-align:left;
+	margin-top:0px;
+	position:relative;
+	left:0px;
 }
 
 .headTitle h4 {
