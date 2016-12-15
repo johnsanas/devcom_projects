@@ -24,7 +24,7 @@ include("session.php");
 			<?php include("headTitle.php"); ?>
 
 			<div class="contentMain">
-				<div class="row-grid">
+				<div class="row-grid ThemeWear">
 					<div class="col-sm-3 col-md-4">
 						<a href="themewear.php" class="thumbnail yellow">
 							<img src="img/pageantLogo.png">
@@ -34,7 +34,7 @@ include("session.php");
 				</div>
 
 
-				<div class="row-grid">
+				<div class="row-grid SchoolWear">
 					<div class="col-sm-3 col-md-4">
 						<a href="schoolwear.php" class="thumbnail pink">
 							<img src="img/pageantLogo.png">
@@ -43,7 +43,7 @@ include("session.php");
 					</div>
 				</div>
 
-				<div class="row-grid">
+				<div class="row-grid FormalWear">
 					<div class="col-sm-3 col-md-4">
 						<a href="formalwear.php" class="thumbnail blue">
 							<img src="img/pageantLogo.png">
@@ -51,7 +51,7 @@ include("session.php");
 						</a>
 					</div>
 				</div>
-				<div class="row-grid">
+				<div class="row-grid SwimWear">
 					<div class="col-sm-3 col-md-4">
 						<a href="swimwear.php" class="thumbnail green">
 							<img src="img/pageantLogo.png">
@@ -60,7 +60,7 @@ include("session.php");
 					</div>
 				</div>
 
-				<div class="row-grid">
+				<div class="row-grid QnA">
 					<div class="col-sm-3 col-md-4">
 						<a href="#" class="thumbnail white">
 							<img src="img/pageantLogo.png">
@@ -72,6 +72,21 @@ include("session.php");
 
 		</div>
 
+	<script src="https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js"></script>
+	<script>
+	$(document).ready(function(){
 
+		window.sr = ScrollReveal({ duration: 2000 });
+		sr.reveal('.ThemeWear', 100);
+		sr.reveal('.SchoolWear', { delay: 200});
+		sr.reveal('.FormalWear', { delay: 400});
+		sr.reveal('.SwimWear', { delay: 600});
+		sr.reveal('.QnA', { delay: 800});
+
+
+
+	}); 
+
+	</script>
 </body>
 </html>
