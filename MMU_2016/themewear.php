@@ -1,3 +1,7 @@
+<?php 
+include("session.php");
+include("connection.php");
+?>
 <!DOCTYPE HTML>
 <html>
 
@@ -11,7 +15,7 @@
 		<div class="categoryHome">
 
 			<div class="headTitle">
-				<h6>Mr. Aldwin Labrador</h6>
+				<h6><?php echo($fullname); ?></h6>
 				<h5>Judge</h5>
 				<h1>THEME WEAR</h1>
 				<h4>MR & MS UMAK</h4>
@@ -109,6 +113,7 @@
 
 					   <div class="row-grid">
 					 	 <div class="col-md-6 col-md-6 blacky">
+					 	 		<form>
 					   			<h3>Criteria</h3> 
 
 					   			<p>Poise and Bearing</p>
@@ -136,6 +141,7 @@
 					   				</select>
 
 					   				<input type="submit" value="Save"> 
+					   		</form>
 					  	</div>
 					  </div>
 
@@ -147,3 +153,10 @@
 
 </body>
 </html>
+
+<?php
+
+
+
+
+?>

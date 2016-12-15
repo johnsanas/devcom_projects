@@ -7,7 +7,6 @@ include("session.php");
 <head>
 	<title>MMU | CATEGORY</title>
 	<?php include("header.php"); ?>
-
 </head>
 
 <body class="categoryHomeBC">
