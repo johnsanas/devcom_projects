@@ -210,7 +210,7 @@ if (isset($_POST['m_submit'])) {
 
 		$judge_id = $judge_id;
 		$candidate_id = $candidateidm;
-		$category = "Theme Wear";
+		$category = "Theme wear";
 		$score = $_POST['m_poiseBear'];
 
 		$sub_category = "PoiseBear";

@@ -26,7 +26,7 @@
 			<?php include("headTitle.php"); ?>
 <div class="contentMain">
 				<div class="instructions">
-					<p>Theme wear category has a 20% part on the overall judging process. Each criteria has a   corresponding maximum score given.
+					<p>Swim wear category has a 20% part on the overall judging process. Each criteria has a   corresponding maximum score given.
 					Choose from the dropdown menu to select for a particular candidate.</p>
 				</div>
 
@@ -34,6 +34,7 @@
 					<a class="button btn-default" href='category.php'>BACK</a>
 				</div>
 
+				
 				
 				<div class="row-grid">	
 				  <div class="col-sm-12 col-md-6">
@@ -69,8 +70,8 @@
 					 	 	
 					 	 	
 					 	 	$row = mysqli_fetch_array($result);
+							$candidateidf = $row['id'];
 
-					 	 	$candidateidf = $row['id'];
 					 	 	$candidateno = $row['candidate_number'];
 					 	 	$candidateimg = $row['candidate_img'];
 }
@@ -84,7 +85,7 @@
 					 	 <div class="col-md-6 col-md-6 blacky">
 					 	 	<form method="POST" action="">
 				   			<h3>Criteria</h3> 
-
+				   			<input type="hidden" name="candidateidf2" value="<?php echo $candidateidf; ?>">
 				   			<p>Poise and Bearing</p>
 				   				<select name="f_poiseBear">
 				   					<option selected disabled hidden>Choose a score..</option>
@@ -165,6 +166,7 @@
 					 	 <div class="col-md-6 col-md-6 blacky">
 					   			<h3>Criteria</h3> 
 					   		<form action="" method="post">
+					   			<input type="hidden" name="candidateidf2" value="<?php echo $candidateidf; ?>">
 					   			<p>Poise and Bearing</p>
 					   				<select name="m_poiseBear" requireds>
 					   					<option selected disabled hidden>Choose a score..</option>
@@ -246,7 +248,7 @@ if (isset($_POST['m_submit'])) {
 if (isset($_POST['f_submit'])) { 
 
 		$judge_id = $judge_id;
-		$candidate_id = $candidateidf;
+		$candidate_id = $_POST['candidateidf2'];
 		$category = "Swim Wear";
 		$score = $_POST['f_poiseBear'];
 
