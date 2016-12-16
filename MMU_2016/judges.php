@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>MMU | ADMIN List</title>
+	<title>MMU | Judges List</title>
 	<?php include("header.php"); include("connection.php"); ?>
 </head>
 
@@ -13,7 +13,7 @@
 			<div class="headTitle">
 				<h6>Mr. Aldwin Labrador</h6>
 				<h5 style="margin-left: -100px">Judge</h5>
-				<h1>ADMINISTRATOR</h1>
+				<h1>JUDGES</h1>
 				<h4>MR & MS UMAK</h4>
 				<h3>2016</h3>
 			</div>
@@ -24,7 +24,7 @@
 				<div class="row-grid">
 
 				<?php 
-					$sql = "SELECT * FROM admin";
+					$sql = "SELECT * FROM judges";
 					$query = mysqli_query($conn, $sql);
 
 					while($result = mysqli_fetch_assoc($query)){
@@ -34,11 +34,11 @@
 				?>
 						<div class="col-sm-3 col-md-4">
 							<img src="img/anon.png" class="shadow">
-							<label class="canNum"><?php echo $result['first_name'].' '.$result['last_name']; ?>
-								<span class="glyphicon glyphicon-pencil" aria-hidden="true" data-toggle="modal" data-target="#EditAdmin<?php echo $id;?>"></span>
+							<label class="canNum"><?php echo $result['first_name'].' '.$result['last_name'].$result['access_key']; ?>
+								<span class="glyphicon glyphicon-pencil" aria-hidden="true" data-toggle="modal" data-target="#EditJudge<?php echo $id;?>"></span>
 						
 
-								<span class="glyphicon glyphicon-pencil" aria-hidden="true" data-toggle="modal" data-target="#DeleteAdmin<?php echo $id;?>"></span> 
+								<span class="glyphicon glyphicon-pencil" aria-hidden="true" data-toggle="modal" data-target="#DeleteJudge<?php echo $id;?>"></span> 
 							</label>
 						</div>
 				<?php

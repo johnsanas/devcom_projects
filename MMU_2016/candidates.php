@@ -12,7 +12,7 @@
 
 			<div class="headTitle">
 				<h6>Mr. Aldwin Labrador</h6>
-				<h5>Judge</h5>
+				<h5 style="margin-left: -100px">Judge</h5>
 				<h1>CANDIDATES</h1>
 				<h4>MR & MS UMAK</h4>
 				<h3>2016</h3>
@@ -32,6 +32,7 @@
 						$id = $result['id'];
 						$candidate_number = $result['candidate_number'];
 						$candidateimg = $result['candidate_img'];
+						$first_name = $result['first_name'];
 						include('editDelete_modal.php');
 				?>
 						<div class="col-sm-3 col-md-4">
@@ -54,6 +55,7 @@
 					while($result = mysqli_fetch_array($query)){
 						$id = $result['id'];
 						$candidate_number = $result['candidate_number'];
+						$first_name = $result['first_name'];
 						$candidateimg = $result['candidate_img'];
 						include('editDelete_modal.php');
 				?>

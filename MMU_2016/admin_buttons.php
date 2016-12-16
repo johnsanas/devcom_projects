@@ -2,7 +2,9 @@
 					
 					<a class="btn btn-info" href="candidates.php">Candidates</a>
 					<a class="btn btn-info" href="admin.php">Administrator</a>
+					<a class="btn btn-info" href="judges.php">Judges</a>
 					<a class="btn btn-info" href="results.php">Results</a>
+
 
 					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#AddCandidate">+ Candidate</button>
 
@@ -89,7 +91,7 @@
 						          </div>
 						          <div class="form-group">
 						            <label for="message-text" class="control-label">Password:</label>
-						            <input type="text" class="form-control" name="password" required>
+						            <input type="password" class="form-control" name="password" required>
 						          </div>
 
 						        
@@ -302,6 +304,74 @@
 		}
 ?>
 		<script>window.location.href = 'admin.php' </script>
+<?php
+	}
+
+?>
+
+
+<?php
+	if(isset($_POST['saveJudge'])){
+		$first_name = $_POST['first_name'];
+		$last_name = $_POST['last_name'];
+		$occupation = $_POST['occupation'];
+		$description = $_POST['description'];
+		//$gender = $_POST['gender'];
+		$access_key = rand(1000,9999);
+
+		$sql = "INSERT INTO judges (first_name, last_name, occupation, description, access_key) VALUES('$first_name', '$last_name', '$occupation', '$description', '$access_key')";
+		$query = mysqli_query($conn, $sql);
+
+		if($query){
+			echo "<script>alert('Judge successfully added')</script>";
+		}else{
+			echo "<script>alert('Failed to add judge')</script>".mysqli_error($conn);
+		}
+?>
+		<script>window.location.href = 'judges.php' </script>
+<?php		
+	}
+?>
+
+
+
+
+<?php
+	if(isset($_POST['updateJudge'])){
+		$id = $_POST['id'];
+		$first_name = $_POST['first_name'];
+		$last_name = $_POST['last_name'];
+		$occupation = $_POST['occupation'];
+		$description = $_POST['description'];
+
+		$sql = "UPDATE judges SET first_name='$first_name', last_name='$last_name', occupation='$occupation', description='$description' WHERE id='$id'";
+		$query = mysqli_query($conn,$sql);
+		
+		if($query){
+			echo "<script>alert('Judge Successfully Updated')</script>";
+		}else{
+			echo "<script>alert('Failed to update judge')</script>";
+		}
+?>
+		<script>window.location.href = 'judges.php' </script>
+<?php
+
+	}
+?>
+
+<?php 
+	if(isset($_POST['deleteJudge'])){
+		$id = $_POST['id'];
+		$sql = "DELETE FROM judges WHERE id='$id'";
+		$query = mysqli_query($conn,$sql);
+		
+		if($query){
+			echo "<script>alert('Judge Successfully deleted')</script>";
+		}else{
+			echo "<script>alert('Failed to delete judge')</script>";
+		}
+?>
+		<script>window.location.href = 'judges.php' </script>
 <?php
 	}
 
