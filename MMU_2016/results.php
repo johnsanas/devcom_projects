@@ -12,8 +12,13 @@
 
 			<div class="headTitle">
 				<h6>Mr. Aldwin Labrador</h6>
+<<<<<<< HEAD
+				<h5 style="margin-left: -100px">Judge</h5>
+				<h1>CANDIDATES</h1>
+=======
 				<h5>Judge</h5>
 				<h1>RESULTS</h1>
+>>>>>>> 7b218dddcafd7a77c32745808a5a9650ace69cd0
 				<h4>MR & MS UMAK</h4>
 				<h3>2016</h3>
 			</div>
