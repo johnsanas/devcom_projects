@@ -27,9 +27,15 @@
 
 				<?php
 
+				$sqli = "SELECT * FROM candidates ORDER BY candidate_number";
+				$results = mysqli_query($conn, $sqli);
+				if (mysqli_num_rows($results)>0){
 
+					while($row = mysqli_fetch_array($results)){
 
-
+							$candidateid = $row['id'];
+					 	 	$candidateno = $row['candidate_number'];
+					 	 	$candidateimg = $row['candidate_img'];
 				?>
 
 				<div class="row-grid">
@@ -38,20 +44,7 @@
 				      
 				      <div class="row-grid">
 					 	 <div class="col-md-6 col-md-6 whitey">
-					 	 	<?php
 
-					 	 	$sql = "SELECT * FROM candidates WHERE gender='Male' ";
-					 	 	$result = mysqli_query($conn, $sql);
-					 	 	if (mysqli_num_rows($result)>0) {
-					 	 	
-					 	 	
-					 	 	$row = mysqli_fetch_array($result);
-
-					 	 	$candidateid = $row['id'];
-					 	 	$candidateno = $row['candidate_number'];
-					 	 	$candidateimg = $row['candidate_img'];
-							}
-							?>
 					 	 	<img src="<?php echo $candidateimg;?>" id="leftimage">
 					 	 	<p style="width:100%">Candidate # <?php echo "$candidateno";?></p>
 						</div>
@@ -85,7 +78,13 @@
 
 
 
+				<?php 
 
+	}
+				}
+
+
+				?>
 
 
 			</div>
