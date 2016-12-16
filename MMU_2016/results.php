@@ -53,23 +53,58 @@
 					   <div class="row-grid">
 					 	 <div class="col-md-6 col-md-6 blackyR">
 					   			<h3>Categories</h3> 
-					   		<form action="" method="post">
+
+					   			<?php 
+
+					   				$sql = "SELECT * FROM votes WHERE candidate_id = '$candidateid'";
+					   				$result = mysqli_query($conn, $sql);
+
+					   				if(mysqli_fetch_array($result)){
+
+					   				$rows = mysqli_fetch_array($result);
+
+
+					   				
+
+					   			?>
+
 					   			<p>Theme wear</p>
-					   				<p></p>
+					   				<p><?php
+
+					   				$sqlscore = "SELECT * FROM votes WHERE category = 'Theme wear' AND candidate_id = '$candidateid'";
+					   				
+					   				$resultscore = mysqli_query($conn, $sqlscore);
+
+					   				if(mysqli_fetch_array($resultscore)){
+
+					   				while($rowscore = mysqli_fetch_array($resultscore)){
+
+					   				}
+
+					   				 echo "";
+									}
+
+					   				 ?></p>
 
 					   			<p>Formal wear</p>
-					   				<p></p>
+					   				<p><?php echo "";?></p>
 
 					   			<p>Swim wear</p>
-					   				<p></p>
+					   				<p><?php echo "";?></p>
 
 					   			<p>School wear</p>
-					   				<p></p>
+					   				<p><?php echo "";?></p>
 
 					   			<p>Question and Answer</p>
-					   				<p></p>
+					   				<p><?php echo "";?></p>
 
-					   		</form>
+
+					   			<?php 
+
+					   					
+
+					   				}
+					   			?>
 					  	</div>
 					  </div>
 
