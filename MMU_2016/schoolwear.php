@@ -82,33 +82,35 @@ include("session.php");
 
 					   <div class="row-grid">
 					 	 <div class="col-md-6 col-md-6 blacky">
+					 	 	<form method="POST" action="">
 				   			<h3>Criteria</h3> 
 
 				   			<p>Poise and Bearing</p>
-				   				<select name="poiseBear">
+				   				<select name="f_poiseBear">
 				   					<option selected disabled hidden>Choose a score..</option>
 								    <?php Populate_Dropdown30(); ?>
 				   				</select>
 
 				   			<p>Carriage</p>
-				   				<select name="carriage">
+				   				<select name="f_carriage">
 				   					<option selected disabled hidden>Choose a score..</option>
 								    <?php Populate_Dropdown30(); ?>
 				   				</select>
 
 				   			<p>Beauty</p>
-				   				<select name="beauty">
+				   				<select name="f_beauty">
 				   					<option selected disabled hidden>Choose a score..</option>
 								    <?php Populate_Dropdown20(); ?>
 				   				</select>
 
 				   			<p>Elegance and Sophistication</p>
-				   				<select name="eleSop">
+				   				<select name="f_eleSop">
 				   					<option selected disabled hidden>Choose a score..</option>
 								    <?php Populate_Dropdown20(); ?>
 				   				</select>
 
-				   				<input type="submit" value="Save"> 
+				   				<input type="submit" value="Save" name="f_submit"> 
+				   				</form>
 					  	</div>
 					  </div>
 
@@ -238,5 +240,43 @@ if (isset($_POST['m_submit'])) {
 			echo "<script>alert('Failed to add Votes')</script>";
 		}
 }
+
+
+
+if (isset($_POST['f_submit'])) { 
+
+		$judge_id = $judge_id;
+		$candidate_id = $candidateid;
+		$category = "School Wear";
+		$score = $_POST['f_poiseBear'];
+
+		$sub_category = "PoiseBear";
+		$sql = "INSERT INTO votes (date_time, judge_id, candidate_id, category, sub_category, score) VALUES(now(), $judge_id, $candidate_id, '$category', '$sub_category' , '$score')";
+		$query = mysqli_query($conn, $sql);
+
+		$sub_category = "Carriage";
+		$score = $_POST['f_carriage'];
+		$sql = "INSERT INTO votes (date_time, judge_id, candidate_id, category, sub_category, score) VALUES(now(), $judge_id, $candidate_id, '$category', '$sub_category' , '$score')";
+		$query = mysqli_query($conn, $sql);
+
+		$sub_category = "Beauty";
+		$score = $_POST['f_beauty'];
+		$sql = "INSERT INTO votes (date_time, judge_id, candidate_id, category, sub_category, score) VALUES(now(), $judge_id, $candidate_id, '$category', '$sub_category' , '$score')";
+		$query = mysqli_query($conn, $sql);
+
+		$sub_category = "EleSop";
+		$score = $_POST['f_eleSop'];
+		$sql = "INSERT INTO votes (date_time, judge_id, candidate_id, category, sub_category, score) VALUES(now(), $judge_id, $candidate_id, '$category', '$sub_category' , '$score')";
+		$query = mysqli_query($conn, $sql);
+
+
+
+		if($query){
+			echo "<script>alert('Voted Successfully Added')</script>";
+		}else{
+			echo "<script>alert('Failed to add Votes')</script>";
+		}
+}
+
 
 ?>

@@ -2,6 +2,7 @@
 					
 					<a class="btn btn-info" href="candidates.php">Candidates</a>
 					<a class="btn btn-info" href="admin.php">Administrator</a>
+					<a class="btn btn-info" href="results.php">Results</a>
 
 					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#AddCandidate">+ Candidate</button>
 
