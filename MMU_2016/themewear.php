@@ -68,7 +68,7 @@ include("session.php");
 					 	 	
 					 	 	
 					 	 	$row = mysqli_fetch_array($result);
-
+							$candidateidf = $row['id'];
 					 	 	$candidateno = $row['candidate_number'];
 					 	 	$candidateimg = $row['candidate_img'];
 }
@@ -149,7 +149,7 @@ include("session.php");
 					 	 	
 					 	 	$row = mysqli_fetch_array($result);
 
-					 	 	$candidateid = $row['id'];
+					 	 	$candidateidm = $row['id'];
 					 	 	$candidateno = $row['candidate_number'];
 					 	 	$candidateimg = $row['candidate_img'];
 							}
@@ -207,7 +207,7 @@ include("session.php");
 if (isset($_POST['m_submit'])) { 
 
 		$judge_id = $judge_id;
-		$candidate_id = $candidateid;
+		$candidate_id = $candidateidm;
 		$category = "Theme Wear";
 		$score = $_POST['m_poiseBear'];
 
@@ -244,7 +244,7 @@ if (isset($_POST['m_submit'])) {
 if (isset($_POST['f_submit'])) { 
 
 		$judge_id = $judge_id;
-		$candidate_id = $candidateid;
+		$candidate_id = $candidateidf;
 		$category = "Theme Wear";
 		$score = $_POST['f_poiseBear'];
 
