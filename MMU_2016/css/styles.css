@@ -177,6 +177,10 @@ body {
 	background-color: rgb(219,219,219);
 }
 
+.contentMain .row-grid .grey {
+	background-color: rgb(40,40,40);
+}
+
 .contentMain .row-grid a {
 	text-decoration: none;
 	box-shadow: 5px 5px 10px black;
@@ -204,6 +208,11 @@ body {
 
 .contentMain .row-grid .white:hover{
 	background-color: rgb(201,201,201);
+	transition: background-color 0.8s;
+}
+
+.contentMain .row-grid .grey:hover{
+	background-color: rgb(30,30,30);
 	transition: background-color 0.8s;
 }
 
@@ -241,6 +250,11 @@ body {
 
 .darkWhite{
 	background-color: rgb(201,201,201);
+}
+
+
+.dark{
+	background-color: rgb(30,30,30);
 }
 
 .contentMain .row-grid h3:hover {
@@ -294,11 +308,45 @@ body {
 	margin-bottom: 50px;
 }
 
+.blackyR {
+	background-color: black;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+	margin-top: 20px;
+	margin-bottom: 50px;
+}
+
 .blacky h3 {
 	font-family: Century gothic;
 	color: rgb(118,83,23);
 	text-align: left;
 	margin-bottom: 0px;
+}
+
+.blackyR {
+	background-color: black;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+	margin-top: 20px;
+	margin-bottom: 50px;
+}
+
+
+
+.row-grid .blackyR p {
+	color: white;
+	font-family: Century Gothic;
+	text-align: left;
+	font-size: 16px;
+	margin-bottom: 0px;
+}
+
+.row-grid .blackyR select {
+	border-radius: 4px;
+	font-family: Century Gothic;
+	width: 80%;
+	height: 30px;
+	margin-top: -20px;
 }
 
 .row-grid .blacky p {
@@ -451,4 +499,6 @@ body {
 .
 
 
-
+.topVotesContainer h1 {
+	color: 
+}

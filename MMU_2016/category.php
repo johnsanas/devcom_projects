@@ -62,9 +62,18 @@ include("session.php");
 
 				<div class="row-grid QnA">
 					<div class="col-sm-3 col-md-4">
-						<a href="#" class="thumbnail white">
+						<a href="questionandanswer.php" class="thumbnail white">
 							<img src="img/pageantLogo.png">
 							<p class="darkWhite">Question and Answer</p>
+						</a>
+					</div>
+				</div>
+
+				<div class="row-grid QnA">
+					<div class="col-sm-3 col-md-4">
+						<a href="finalQNA	.php" class="thumbnail grey">
+							<img src="img/pageantLogo.png">
+							<p class="dark">Final Question and Answer</p>
 						</a>
 					</div>
 				</div>
