@@ -1,0 +1,159 @@
+* {
+	margin: 0px auto; 
+	padding: 0px auto;
+}
+
+body {
+	font-family: century gothic;
+	background: url(../images/backgroundNew.jpg);
+	background-size: 100%;
+}
+
+
+.whole_container{
+	width: 75%;
+}
+
+.greeting{
+	width: 50%;
+	float: right;
+	height: 50px;
+	border-bottom: 3px solid white;
+}
+
+.greeting p{
+	text-align: right;	
+	margin-top: 15px;
+	color: white;
+}
+
+
+.college_details{
+	width: 100%;
+	float: left;
+	clear: both;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.logo{
+	width: 100px;
+	height: 100px;
+	float: left;
+}
+
+.college_name{
+	float: left;
+	margin-left: 20px;
+	margin-top: 15px;
+	font-family: arial;
+	color: white;
+	font-size: 25px;
+}
+
+
+.candidate_container{
+	width: 100%;
+	float: left;
+	margin-top: 30px;
+}
+
+#representative_candidate{
+	display:none;
+}
+
+.candidate_position{
+	background-color: rgb(32,56,100);
+	width: 100%;
+	height: 30px;
+	padding-top: 5px;
+}
+
+.candidate_position p{
+	text-align: center;
+	color: white;
+}
+
+.candidate{
+	width: 49%;
+	height: 150px;
+	float: left;
+	background-color: rgb(222,235,247);
+	margin-right: 10px;
+}
+
+.candidate:hover{
+	background-color: rgb(254,248,127);
+	box-shadow: 3px 3px 5px 0px rgba(1,1,1,.6);
+}
+
+.candidate_photo{
+	width:120px;
+	height: 120px;
+	float: left;
+	margin-left: 20px;
+	margin-top: 10px;
+}
+
+.candidate_details{
+	float: right;
+	width: 65%;
+	margin-top: 30px;
+}
+
+.candidate_details p{
+	font-family: arial;
+}
+
+#btnSubmit{
+	position:fixed;
+	/*top:80px;*/
+	right:100px;
+	bottom:50px;
+
+	/*position:relative;
+	top:80px;
+	left:850px;*/
+
+	background-color:white;
+	/*background-color:white;*/
+	border:none;
+	border-radius:5px;
+	box-shadow:3px 3px 3px black;
+	padding:10px;
+	color:rgba(32,56,100,1);
+	font-family:century gothic;
+	font-size:24px;
+	transition: background-color 0.5s,color 0.5s;
+}
+
+#btnSubmit:hover{
+	background-color:rgba(32,56,100,1);
+	color:white;
+}
+
+
+.instruct {
+	clear: both;
+	text-align: center;
+	background-color: rgba(1,1,1,.6);
+	padding-left: 20%;
+	padding-right: 20%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.instruct h5 {
+	font-weight: bolder;
+	font-size: 20px;
+	text-transform: uppercase;
+	color:white;
+	text-align: center;
+}
+
+.instruct p {
+	clear: both;
+	color:white;
+	text-align: center;
+	text-indent: inherit;
+}
